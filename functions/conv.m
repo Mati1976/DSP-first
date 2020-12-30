@@ -1,13 +1,21 @@
-function res=conv(a , b);
+function Res=lconv(A ,B);
+%The lconv function calculate the linear concolution of two vectors
+%The input will be two vectos A and B
 
-    Leng=length(a)+length(b)-1;
-    an=[zeros(1,length(b)-1) a];
-    br=b(1,length(b):-1:1);
-    bn=[br  zeros(1,length(a)-1)];
-    res=zeros(1,Leng);
+    %calculating the length of the resulting 
+    Leng=length(A)+length(B)-1; 
+    %Padding the A vector 
+    An=[zeros(1,length(B)-1) A];
+    %Creating a new vector Br (The B(-n) vector)
+    Br=B(1,length(B):-1:1);
+    %Padding the reversed B vector 
+    Bn=[Br  zeros(1,length(A)-1)];
+    %Setting up the Result vector
+    Res=zeros(1,Leng);
+    %Calculating the linear convoultion vector for the Length calculated before  
     for i=1:Leng
-        c=an.*bn;
-        res(1,i)=sum(c);
-        bn=[0 bn(1:1:Leng-1)];
+        C=An.*Bn;
+        Res(1,i)=sum(C);
+        Bn=[0 Bn(1:1:Leng-1)];
     end
 end
