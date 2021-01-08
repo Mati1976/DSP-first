@@ -1,5 +1,5 @@
 function Res=lccnv(A ,B);
-%The lccnv function calculate the circular concolution of two correctly
+%The lccnv function calculate the circular convolution of two correctly
 %zero padded vectors
 %The vectors will be paddedwith zeros in the end so that thier total length
 %will be length(A)+length(B)-1, by doing so the circular convolution will

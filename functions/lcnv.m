@@ -1,5 +1,5 @@
 function Res=lcnv(A ,B);
-%The lcnv function calculate the linear concolution of two vectors
+%The lcnv function calculate the linear convolution of two vectors
 %The input will be two vectos A and B
 
     %calculating the length of the resulting 
